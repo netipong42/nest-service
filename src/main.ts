@@ -29,6 +29,7 @@ async function bootstrap() {
   );
   app.enableCors();
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
+  app.setGlobalPrefix('api');
 
   const port = process.env.PORT || 3000;
 
